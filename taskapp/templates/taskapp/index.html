@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+    {% block title %}
+    Task App
+{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for t in task%}
+        <li>{{t}}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'taskapp:add_task_form' %}">Add Task</a>
+    {% endblock %}
